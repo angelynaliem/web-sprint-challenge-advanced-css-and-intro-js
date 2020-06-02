@@ -209,7 +209,7 @@ const artists = [
 (2) Bio of the third artist (2nd index) in the array */
 
 console.log(artists[0].name);
-console.log(artists[2].name);
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
@@ -253,6 +253,18 @@ function get20s(artists) {
     console.log(newArtists);  
   }
   get20s(artists);
+
+
+function get20s(artists) {
+  let newArtists = [];
+  newArtists = artists.filter((year) => {
+    return year.years > "1900";
+  });
+  for (let i = 0; i < newArtists.length; i++) {
+    console.log(newArtists[i].name);
+    }; 
+  }
+  get20s(artists);
   
 
 
@@ -270,6 +282,8 @@ function removeArtist(artists, i) {
     artists.shift();
   console.log(artists.length);
   }
+  removeArtist(artists, 0);
+  removeArtist(artists, 0);
   removeArtist(artists, 0);
   
 
@@ -320,6 +334,18 @@ function lotsOfArt(artists) {
 }
   lotsOfArt(artists);
 
+
+
+  function lotsOfArt(artists) {
+    let filterPaintings = [];
+    filterPaintings = artists.filter((paint) => {
+      return paint.paintings > 100;
+    });
+    for (let i = 0; i < filterPaintings.length; i++) {
+    console.log(filterPaintings[i].name);
+    };
+  }
+    lotsOfArt(artists);
 
 
 // 🎨🎨 STRETCH 🎨🎨//
