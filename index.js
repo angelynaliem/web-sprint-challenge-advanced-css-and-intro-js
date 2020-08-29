@@ -208,11 +208,22 @@ const artists = [
 (1) Name of the first artist (0th index) in the array
 (2) Bio of the third artist (2nd index) in the array */
 
+console.log(artists[0].name);
+console.log(artists[2].bio);
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+artists.splice(8,1,{"id": 8,
+"name": "Vincent Van Gogh",
+"years": "1853 – 1890",
+"genre": "Post-Impressionism",
+"nationality": "Dutch",
+"bio": "Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.",
+"wikipedia": "http://en.wikipedia.org/wiki/Vincent_van_Gogh",
+"paintings": 877});  
 
+console.log(artists[8]);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -222,20 +233,39 @@ const artists = [
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(id, name) {
-    /* code here */
+function getArtistByIndex(artists, i) {
+  let id = artists[i].id;
+  let name = artists[i].name;
+  console.log("The artist at index " + id + " is " + name);
   }
+ 
+  getArtistByIndex(artists, 0);
   
   /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1900-2000) */
 
-function get20s(/* Code here */){
+function get20s(artists) {
+  const newArtists = artists.filter((year) => {
+    return year.years > "1900";
+  });
+    console.log(newArtists);  
+  }
+  get20s(artists);
 
-  /* Code here */
 
-}
+function get20s(artists) {
+  let newArtists = [];
+  newArtists = artists.filter((year) => {
+    return year.years > "1900";
+  });
+  for (let i = 0; i < newArtists.length; i++) {
+    console.log(newArtists[i].name);
+    }; 
+  }
+  get20s(artists);
+  
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -248,11 +278,14 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(artists, i) {
+    artists.shift();
+  console.log(artists.length);
   }
+  removeArtist(artists, 0);
+  removeArtist(artists, 0);
+  removeArtist(artists, 0);
   
-  /**
 
 
 
@@ -269,11 +302,19 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should console.log() the new array with information added"*/
 
-function addArtist(/* Code here */){
+function addArtist(artists){
 
-    /* Code here */
-
+  artists.splice(0,0,{
+  "id": 35,
+  "name": "Angelyn Liem",
+  "years": "1985 - Present",
+  "genre": "Christian music",
+  "nationality": "Chinese Indonesian",
+  "bio": "She rocks!"  
+  });
+    console.log(artists);
   }
+  addArtist(artists);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -283,12 +324,28 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
+function lotsOfArt(artists) {
+  
+  const filterPaintings = artists.filter((paint) => {
+    return paint.paintings > 100;
+  });
+  console.log(filterPaintings);
 
 }
+  lotsOfArt(artists);
 
+
+
+  function lotsOfArt(artists) {
+    let filterPaintings = [];
+    filterPaintings = artists.filter((paint) => {
+      return paint.paintings > 100;
+    });
+    for (let i = 0; i < filterPaintings.length; i++) {
+    console.log(filterPaintings[i].name);
+    };
+  }
+    lotsOfArt(artists);
 
 
 // 🎨🎨 STRETCH 🎨🎨//

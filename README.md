@@ -23,10 +23,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe preprocessing to someone new to CSS?
+
+Preprocessing is basically a better way of coding than only using CSS. For someone new to CSS, we use a preprocessor like LESS which is a new, different language that has more robust syntax and helps make our code become more DRY. LESS is compiled through JavaScript into something that fits into and is readable to CSS.
+
 2. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+Most favorite concept in preprocessing is the parametric mixin, because it allows us to reduce lines of code into something simple and beautiful. The concept that gives me most trouble is Functions because it’s not covered much on TK in Preprocessing module, only examples given were darken() and lighten(), so I’m still not very familiar with functions. 
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+To someone new at programming, a variable may be like giving a category to something. For example, at the strawberry farm, we see small, medium, and large strawberries. We can create a variable, e.g. largeStrawberry, that represents different shapes and types of large strawberries, e.g. maybe some that look like “Dumpling Strawberry”, “Cone Strawberry”, and such. We can set keywords to decide whether we want our variables to change (var, let) or stay as it is (const).
+
 4. What is the purpose of using functions in code?
+
+We use functions in code to accomplish a task that we likely will want to repeat again and again. Functions help simplify these tasks into a few lines of codes which otherwise may be a lot longer and tedious. 
+
 5. What is JSON data?
+
+JSON is Java Script Object Notation, a way to store and exchange data from browser to server. A text - usually uses quotations “” and can be converted into JS objects, vice versa.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
